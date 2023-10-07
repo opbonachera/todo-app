@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent {
   showAddTask: boolean = false;
   subscription: Subscription | any;
+  title:string = "Task Tracker"
 
   constructor(private uiService: UiService){
       this.subscription = this.uiService.onToggle().subscribe((value)=>(this.showAddTask=value))
@@ -17,11 +18,8 @@ export class HeaderComponent {
   
   ngOnInit():void{}
 
-  title:string = "Task Tracker"
-
   toggleAddTask(){
-    this.uiService.onToggle();
-    console.log("clicked")
+    this.uiService.toggleAddTask();
   }
 
 }
