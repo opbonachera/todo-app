@@ -1,0 +1,12 @@
+<div class="task display-flex justify-content-center align-items-center container-fluid  m-5 p-5 rounded shadow-sm"
+    [ngClass]="{ reminder: task.reminder }"
+    (click)="onToggle(task)">
+    <h3>{{ task.text }}</h3>
+    <div class="p">Due: {{ task.day}}</div>
+    <span>
+        <fa-icon 
+                [icon]="faTimes"
+                (click)="onDelete(task)">
+        </fa-icon>
+    </span>
+</div>

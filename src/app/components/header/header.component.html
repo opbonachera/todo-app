@@ -1,0 +1,8 @@
+<div class="header-container mt-5 d-flex justify-content-between">
+    <h5>{{ title }}</h5>
+    <app-button class=""
+                text="{{ showAddTask ? 'CLOSE' : 'ADD TASK' }}"
+                (btnClick)="toggleAddTask()">
+</app-button>
+</div>
+<hr>

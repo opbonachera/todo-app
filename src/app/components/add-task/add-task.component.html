@@ -1,0 +1,38 @@
+<form style="width: 50%"
+      class="m-auto border rounded p-5 align-items-center justify-content-center"
+      (ngSubmit)="onSubmit()"
+      *ngIf="showAddTask"
+      >
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1"class="form-label">Text</label>
+      <input type="email" 
+             class="form-control"
+             id="text"
+             aria-describedby="emailHelp"
+             name="text"
+             [(ngModel)] = "text"
+       >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Day</label>
+      <input type="text"
+             class="form-control" 
+             id="day"
+             name="day"
+             [(ngModel)] = "day"
+
+       >
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox"
+               name="reminder"
+               class="form-check-input"
+               id="reminder"
+               [(ngModel)] = "reminder"        
+       >
+        <label class="form-check-label" for="exampleCheck1">Set reminder</label>
+    </div>
+    <button type="submit" class="btn btn-dark w-100">Add Task</button>
+
+  </form>
